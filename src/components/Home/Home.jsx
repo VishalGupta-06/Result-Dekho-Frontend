@@ -8,7 +8,8 @@ import { getHomeStats } from "./homeStats.js";
 import student from "./studentData.js";
 import Graph from "./graph.jsx";
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../utilities/ApiCall.js"
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
@@ -28,7 +29,7 @@ function Home({ check }) {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/home",
         {},
         {
@@ -108,13 +109,7 @@ function Home({ check }) {
 
     setSummaryCard(summary);
 
-
-
-
   }, [homeData]);
-
-  const stats = getHomeStats(student);
-  const { latestSemester } = stats;
 
   return (
     <div className="min-h-screen w-full bg-slate-50 p-3 sm:p-5 lg:p-6">

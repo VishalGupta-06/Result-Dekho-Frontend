@@ -4,7 +4,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaLock, FaUser } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
+import api from "../utilities/ApiCall.js"
 
 function Login({sign}) {
   const [registration, setRegistration] = useState("");
@@ -19,7 +20,7 @@ function Login({sign}) {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/login", // backend route
         {
           registration,

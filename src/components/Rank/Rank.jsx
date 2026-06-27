@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "../Dashboard/DropDown.jsx";
 import ListofResult from "./ListofResult";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../utilities/ApiCall.js"
 
 const branchOption = [
   "ALL",
@@ -60,7 +61,7 @@ function Rank() {
   async function fetchData() {
     setLoading(true);
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/dashboard",
         {
           branch,

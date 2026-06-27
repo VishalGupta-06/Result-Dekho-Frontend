@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaLock, FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import OTP from "./OTP";
+import api from "../utilities/ApiCall.js"
 
 
 
@@ -34,7 +35,7 @@ function SignUp({ sign }) {
     setLoading(true);
 
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/finalSignUp",
         {
           registration,
@@ -65,7 +66,7 @@ function SignUp({ sign }) {
     setLoading(true);
 
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/OTP-verify",
         {
           registration,
@@ -88,7 +89,7 @@ function SignUp({ sign }) {
 
   const submitSignupForm = async (e) => {
 
-    console.log("hello");
+    // console.log("hello");
 
     if (!registration) return;
     setLoading(true);
@@ -97,7 +98,7 @@ function SignUp({ sign }) {
 
     e?.preventDefault();
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/signup",
         {
           registration,

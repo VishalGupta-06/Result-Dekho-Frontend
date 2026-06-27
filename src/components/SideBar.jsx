@@ -9,7 +9,8 @@ import {
   faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
+import api from "../utilities/ApiCall.js"
 import { useNavigate } from "react-router-dom";
 
 const navItems = [
@@ -24,7 +25,7 @@ function SideBar({ sign, log }) {
   const navigate = useNavigate(); // for nagivation
 
   const handleLogout = async () => {
-    await axios.post(
+    await api.post(
       "/api/signout",
       {},
       { withCredentials: true },

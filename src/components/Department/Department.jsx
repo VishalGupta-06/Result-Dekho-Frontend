@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import AvgCgpa from "./AvgCgpa";
 import TopperList from "./TopperList";
 import DropDown from "../Dashboard/DropDown.jsx";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../utilities/ApiCall.js"
 
 const courseOption = ["CGPA", "SGPA"];
 const semOption = [
@@ -48,7 +49,7 @@ function Department() {
   async function fetch() {
      setLoading(true);
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/dashboard",
         {
           branch,
