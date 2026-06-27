@@ -4,7 +4,8 @@ import TopperandLower from "./TopperandLower.jsx";
 import AvgandTotal from "./AvgandTotal.jsx";
 import AvgCard from "./AvgCard.jsx";
 import CgpaDistribution from "./CgpaDistribution.jsx";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../utilities/ApiCall.js"
 
 const branchOption = [
   "ALL",
@@ -68,7 +69,7 @@ function Dashboard() {
   async function fetchData() {
     setLoading(true);
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "/api/dashboard",
         {
           branch,

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../utilities/ApiCall.js"
 import InfoCard from "./InfoCard.jsx";
 import WinnerCard from "./WinnerCard.jsx";
 import CompareGraph from "./CompareGraph.jsx";
@@ -18,7 +19,7 @@ function Student1() {
 
   const fetchData = async (value) => {
     try {
-      const response = await axios.post("/api/searchbox", {
+      const response = await api.post("/api/searchbox", {
         value,
       });
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../utilities/ApiCall.js"
 import DepartmentCompareGraph from "./DepartmentCompareGraph.jsx";
 import DepartmentInfoCard from "./DepartmentInfoCard.jsx";
 import DepartmentWinnerCard from "./DepartmentWinnerCard.jsx";
@@ -119,7 +120,7 @@ function DepartmentCompare() {
         setLoading(true);
         setErrorMessage("");
 
-        const response = await axios.post(
+        const response = await api.post(
           "/api/dashboard",
           {
             branch: "ALL",
