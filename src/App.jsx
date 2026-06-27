@@ -11,6 +11,7 @@ import Compare from "./components/Compare/Compare.jsx";
 import ContactUs from "./components/ContactUs.jsx";
 import About from "./components/About.jsx";
 import useLoggedIn from "./utilities/userLogged.jsx";
+import AuthCallback from "./utilities/AuthCallback.jsx"
 
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useState , useEffect } from "react";
@@ -52,6 +53,7 @@ function App() {
                 <Route path={"/about"} element={<About />} />
                 <Route path={"/login"} element={ <Dashboard /> }/>
                 <Route path={"/signup"} element={<Dashboard />} />
+                <Route path={"/auth/callback"} element={<AuthCallback />} />
                 <Route path={"*"} element={<Navigate to="/" replace />} />
               </Routes>
             </div>

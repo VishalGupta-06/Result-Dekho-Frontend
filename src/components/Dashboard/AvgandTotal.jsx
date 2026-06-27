@@ -7,7 +7,7 @@ function AvgandTotal( {photo = "profile1" , title = "" , data = "" , base = ""})
         <div className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 rounded-full bg-blue-50 p-2 ring-4 ring-blue-100">
           <img
             className="object-contain h-full w-full"
-            src={`./need/${photo}.png`}
+            src={`/need/${photo}.png`}
           />
         </div>
         

@@ -298,21 +298,21 @@ function Dashboard() {
         <div className="w-full">
           <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-4">
             <TopperandLower
-              photoSrc="./need/first.png"
+              photoSrc="/need/first.png"
               name={rank[0]?.Name}
               rollNo={rank[0]?.rollNo}
               cgpa={rank[0]?.cgpa}
               title={course}
             />
             <TopperandLower
-              photoSrc="./need/second.png"
+              photoSrc="/need/second.png"
               name={rank[1]?.Name}
               rollNo={rank[1]?.rollNo}
               cgpa={rank[1]?.cgpa}
               title={course}
             />
             <TopperandLower
-              photoSrc="./need/third.png"
+              photoSrc="/need/third.png"
               name={rank[2]?.Name}
               rollNo={rank[2]?.rollNo}
               cgpa={rank[2]?.cgpa}

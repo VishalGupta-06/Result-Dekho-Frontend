@@ -8,11 +8,11 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:8000",
+        target: "https://result-dekho-backend.onrender.com",
         changeOrigin: true,
       },
       "/auth": {
-        target: "http://localhost:8000",
+        target: "https://result-dekho-backend.onrender.com",
         changeOrigin: true,
       },
     },
