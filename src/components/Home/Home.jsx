@@ -1,14 +1,10 @@
 import React, { useEffect } from "react";
-// import AcademicProfile from "./AcademicProfile.jsx";
 import LatestSubjects from "./LatestSubjects.jsx";
 import SemesterTrend from "./SemesterTrend.jsx";
 import StudentHero from "./StudentHero.jsx";
 import SummaryCards from "./SummaryCards.jsx";
-// import { getHomeStats } from "./homeStats.js";
-// import student from "./studentData.js";
 import Graph from "./graph.jsx";
 import { useState } from "react";
-// import axios from "axios";
 import api from "../../utilities/ApiCall.js"
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
